@@ -9,6 +9,8 @@ function App() {
 
   const [name] = useState('Romildo');
 
+  const redTitle = true;
+
   return (
     <div className="App">
       <h1>React com CSS</h1>
@@ -24,11 +26,14 @@ function App() {
       {/* CSS Inline dinâmico */}
       <h2 style={n < 10 ? ({ color: 'purple' }) : ({ color: 'pink' })}>CSS Dinâmico</h2>
       <h2 style={n > 10 ? ({ color: 'purple' }) : ({ color: 'pink' })}>CSS Dinâmico</h2>
-      <h2 style={name === 'Romildo' ? ({ color: 'green', backgroundColor:"#000" }) : null }>CSS Dinâmico condição verdadeira</h2>
+      <h2 style={name === 'Romildo' ? ({ color: 'green', backgroundColor:"#000" }) : null }>
+        CSS Dinâmico condição verdadeira
+      </h2>
       <h2 style={name === 'Junior' ? ({ color: 'green', backgroundColor:"#000" }) : null }>CSS Dinâmico condição falsa</h2>
 
-      {/*CSS Inline Dinamico */}
-      <h2>CSS dinâmico</h2>
+      {/*Classe dinâmica */}
+      <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica se for true</h2>
+      <h2 className={redTitle === false ? "red-title" : "title"}>Este título vai ter classe dinâmica se for false</h2>
     </div>
   );
 }

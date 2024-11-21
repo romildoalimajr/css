@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState} from 'react';
 import MyComponent from './components/MyComponent';
+import Title from './components/Title';
 
 function App() {
 
@@ -34,6 +35,9 @@ function App() {
       {/*Classe dinâmica */}
       <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica se for true</h2>
       <h2 className={redTitle === false ? "red-title" : "title"}>Este título vai ter classe dinâmica se for false</h2>
+      {/** CSS Módules */}
+      <Title />
+
     </div>
   );
 }

@@ -24,9 +24,11 @@ function App() {
       {/* CSS Inline dinâmico */}
       <h2 style={n < 10 ? ({ color: 'purple' }) : ({ color: 'pink' })}>CSS Dinâmico</h2>
       <h2 style={n > 10 ? ({ color: 'purple' }) : ({ color: 'pink' })}>CSS Dinâmico</h2>
-      <h2 style={name === 'Romildo' ? ({ color: 'green', backgroundColor:"#000" }) : null }>CSS Dinâmico</h2>
+      <h2 style={name === 'Romildo' ? ({ color: 'green', backgroundColor:"#000" }) : null }>CSS Dinâmico condição verdadeira</h2>
+      <h2 style={name === 'Junior' ? ({ color: 'green', backgroundColor:"#000" }) : null }>CSS Dinâmico condição falsa</h2>
 
-
+      {/*CSS Inline Dinamico */}
+      <h2>CSS dinâmico</h2>
     </div>
   );
 }
